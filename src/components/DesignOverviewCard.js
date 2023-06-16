@@ -105,7 +105,7 @@ const DesignOverviewCard = ({
                       <img
                         className="relative w-7 h-[5px]"
                         alt=""
-                        src="/.svg"
+                        src="/1.svg"
                       />
                     </div>
                   </div>

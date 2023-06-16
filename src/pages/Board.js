@@ -199,7 +199,7 @@ const Board = () => {
                               <img
                                 className="relative w-7 h-[5px]"
                                 alt=""
-                                src="/.svg"
+                                src="/1.svg"
                               />
                             </div>
                           </div>
@@ -261,7 +261,7 @@ const Board = () => {
                             <img
                               className="relative w-7 h-[5px]"
                               alt=""
-                              src="/2.svg"
+                              src="/1.svg"
                             />
                           </button>
                         </div>
