@@ -13,6 +13,9 @@ const DesignOverviewCard = ({
   frame,
   toDoValue = "Todo",
   counterValue = "0",
+  frameOverflow,
+  frameFlexShrink,
+  frame1,
 }) => {
   const frameDivStyle = useMemo(() => {
     return {
@@ -32,6 +35,13 @@ const DesignOverviewCard = ({
     };
   }, [propCursor]);
 
+  const frameIconStyle = useMemo(() => {
+    return {
+      overflow: frameOverflow,
+      flexShrink: frameFlexShrink,
+    };
+  }, [frameOverflow, frameFlexShrink]);
+
   const [isDrawer1Open, setDrawer1Open] = useState(false);
 
   const openDrawer1 = useCallback(() => {
@@ -50,7 +60,12 @@ const DesignOverviewCard = ({
             className="flex flex-row items-center justify-center gap-[7px]"
             style={frameDivStyle}
           >
-            <img className="relative w-4 h-4" alt="" src={frame} />
+            <img
+              className="relative w-4 h-4"
+              alt=""
+              src={frame}
+              style={frameIconStyle}
+            />
             <input
               className="[border:none] font-medium font-inter text-xs bg-[transparent] relative leading-[21px] text-gray text-left"
               type="text"
@@ -70,7 +85,7 @@ const DesignOverviewCard = ({
             <img
               className="relative w-[12.03px] h-3 overflow-hidden shrink-0"
               alt=""
-              src="/frame2.svg"
+              src={frame1}
             />
           </button>
         </div>
@@ -105,7 +120,7 @@ const DesignOverviewCard = ({
                       <img
                         className="relative w-7 h-[5px]"
                         alt=""
-                        src="/1.svg"
+                        src="/2.svg"
                       />
                     </div>
                   </div>
